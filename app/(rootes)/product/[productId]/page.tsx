@@ -1,16 +1,15 @@
 
 
 
-import getCategory from '@/actions/get-category'
+
 import getProduct from '@/actions/get-product'
 import getProducts from '@/actions/get-products'
 import FeaturedBanner from '@/components/FeaturedBanner'
-import Gallery from '@/components/gallery'
+
 import Info from '@/components/info'
 import Container from '@/components/ui/container'
-import ProductCard from '@/components/ui/ProductCard'
-import useCart from '@/hooks/use-cart'
-import { Product } from '@/types'
+
+
 import Image from 'next/image'
 import React from 'react'
 
