@@ -2,9 +2,10 @@ export interface Product {
     id: string;
     category: Category;
     name: string;
-    price: string;
+    price: number;
     isFeatured: boolean;
     size: Size;
+    quantity: number; // Add this property
     color: Color;
     images: Image[]
   };

@@ -10,7 +10,7 @@ export const revalidate=0;
   return (
 
     <Container>
-      <div  className=' pb-10 mx-auto h-full   box-border ' >   
+      <div  className=' pb-10 mx-auto h-auto    ' >   
          <Hero/>
 
        

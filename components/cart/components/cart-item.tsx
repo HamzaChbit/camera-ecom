@@ -44,8 +44,20 @@ const CartItem:React.FC<CartItemProps> = ({data}) => {
          
 
         
-            <div className=' flex text-sm  justify-center items-center ' >
+            <div className=' flex text-sm flex-row justify-between  items-center ' >
+
             <h1  className='text-bold text-yellow-400 text-2xl' >   ${ data.price}</h1>
+
+            <div   className='flex flex-row w-30 ' >
+          <button  className='border-2  bg-yellow-400 text-black text-3xl font-black '  onClick={() => cart.incrementQuantity(data.id)}>+</button>
+                    <input  className='border-none  w-10 ' 
+                        type="number"
+                        min="1" // Minimum value is 1
+                        value={data.quantity}
+                        onChange={(e) => cart.editQuantity(data.id, parseInt(e.target.value))}
+                    />
+                    <button className='border-2 bg-yellow-400 text-black text-3xl font-black' onClick={() => cart.decrementQuantity(data.id)}>-</button>
+          </div>
              
             </div>
           

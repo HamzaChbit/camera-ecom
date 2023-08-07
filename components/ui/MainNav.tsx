@@ -22,7 +22,7 @@ const MainNav: React.FC<MainNavProps> = ({
 
   return (
     <nav
-      className="mx-6 flex font-medium items-start flex-col  "
+      className="mx-6 flex font-medium items-start flex-col py-4 "
     >
       {routes.map((route) => (
         <Link

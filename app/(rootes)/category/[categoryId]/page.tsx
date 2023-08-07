@@ -36,20 +36,20 @@ const  CategoryPage:React.FC<CategoryPageProps> =  async ({params}) => {
 
   return (
 
-   <div className='bg-body h-full ' >
+   <div className='bg-body py-5 h-auto' >
 
 
        <Container  >
-      <div className='  max-w-7xl sm:px-3 lg:px-4  z-10 mx-auto ' >
+      <div className='  max-w-7xl   z-10 md:mx-auto  mx-4 ' >
 
 
-         <div   className='  text-white  flex flex-row  pt-10  h-full ' >
+         <div   className='  text-white  flex md:flex-row flex-col  md:pt-10 pt-2   ' >
       
             {/* left side */}
-             <div   className=' bg-primary  mx-8   h-[50vh] rounded-xl    lg:block  md:hidden sm:hidden ' >
-                <div  className='bg-yellow-500 flex justify-center items-center  rounded-t-xl py-3 ' >
+             <div   className=' bg-primary w-[20%] mx-4  h-[50vh] rounded-xl    md:block  hidden  ' >
+                <div  className='bg-yellow-500 flex justify-center   rounded-t-xl py-3 ' >
                     <h2  className='text-black  py-1 font-bold' >BROWE CATEGORIS</h2>
-                </div>
+                    </div>
                
                 <MainNav data={categories} />
                 </div>
@@ -58,9 +58,9 @@ const  CategoryPage:React.FC<CategoryPageProps> =  async ({params}) => {
         {/* left slide categoy */}
       
         <div  className='  h-full w-full '  >
-          <h2 className='text-white text-bold  mb-3 text-xl' >{category.name} CAMMERAS</h2>
+          <h2 className='text-white text-bold  font-semibold mx-5  mb-3 text-xl' >{category.name} CAMMERAS</h2>
         
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-10 w-max-[200px]' >
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-x-10 gap-y-10 w-auto  ' >
 
   
         {products.map((item)=> (

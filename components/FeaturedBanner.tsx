@@ -20,22 +20,25 @@ const sliderRight = ( ) =>{
 }
 
   return (
-<div  className='max-w-7xl   z-0 mt-3 mx-auto ' >
+<div  className='max-w-7xl h-auto  z-0 mt-3 mx-auto py-5 ' >
 
 
-    <h1  className='text-white my-10  mx-20 font-bold text-2xl' >Related Product</h1>
+    <h1  className='text-white py-10  px-20 font-bold text-2xl' >Related Product</h1>
     <section  className=" h-full flex flex-warp items-center mx-4   group">
        
         
        
-       < MdChevronLeft  onClick={sliderLeft}  className="bg-white text-black  left-0 rounded-full  opacity-50 hover:opacity-100 cursor-pointer  w-40  " size={40}/>
-      <div    id='slider' className=' h-full  overflow-x-scroll whitespace-nowrap flex flex-row scroll-smooth no-scrollbar  relative'>
+    < MdChevronLeft  onClick={sliderLeft}  className="bg-white text-black w-10 h-10  rounded-full  opacity-50 hover:opacity-100 cursor-pointer    " />
+      <div    id='slider' className=' h-full w-full overflow-x-scroll whitespace-nowrap flex flex-row scroll-smooth no-scrollbar  relative'>
+     
       {items.map((item)=> (
         <ProductCard   key={item.id}  data={item} />
       ))
       }
+      
       </div>
-      <MdChevronRight   onClick={sliderRight} className="bg-white text-black  right-0 rounded-full  opacity-50 hover:opacity-100 cursor-pointer  w-40   " size={40}/>
+      <MdChevronRight   onClick={sliderRight} className="bg-white text-black w-10 h-10 rounded-full  opacity-50 hover:opacity-100 cursor-pointer     " />
+      
   </section>
   </div>
   )

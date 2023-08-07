@@ -30,21 +30,16 @@ const ProductCard:React.FC<ProductCardProps> = ({data}) => {
   const handelClick = () => {
     router.push(`/product/${data?.id}`)
   } 
-  // const cart = useCart();
-  // const onAddToCart= () => {
-   
-
-  //   cart.addItem(data);
-  // };
+  
 
   return (
  
     
     
    
-    <div     onClick={handelClick}  className=" items-center  px-5 rounded-xl w-[200px] mx-8 bg-primary z-0 group sm:w-[200px] md:w-[280px] lg:w-[350px] lg:mx-6   inline-block cursor-pointer relative p-2 " >
-        <div   className='bg-yellow-500 w-10 absolute right-1   box-border h-6 rounded-2xl text-black flex items-end '>
-            <div className='flex  absolute right-1 justify-end' >
+    <div     onClick={handelClick}  className="   px-2 rounded-xl w-auto md:mx-4 mx-2  flex justify-center items-center bg-primary z-0  py-2   cursor-pointer relative " >
+        <div   className='bg-yellow-500 w-10 absolute right-1 top-0   box-border h-6 rounded-2xl text-black flex  '>
+            <div className='flex  absolute right-1 top-0 justify-end items-end' >
             NEW
             </div>
            
@@ -54,7 +49,7 @@ const ProductCard:React.FC<ProductCardProps> = ({data}) => {
            
             </div>
 
-        <div  className='mt-10' >
+        <div  className='md:mt-4  mt-2' >
         <Image  src={data.images?.[0]?.url} width={160} height={140} alt='product' />
             <h1   className='text-white text-xl font-bold mt-5 ' >   {truncateString(data.name,15)}</h1>
             <h2  className='text-yellow-500 text-xl font-bold mt-5' >${data.price}</h2>

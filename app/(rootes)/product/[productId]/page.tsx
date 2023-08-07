@@ -29,7 +29,7 @@ const ProductPage:React.FC<ProductPageProps>  = async ({params}) => {
     const Products = await getProducts({ 
       // categoryId: product?.category?.id,
       categoryId: product?.category?.id,
-     
+      isFeatured:true
       });
 
      
@@ -42,19 +42,19 @@ const ProductPage:React.FC<ProductPageProps>  = async ({params}) => {
   
 
   return (
-    <div className="bg-primary  h-auto ">
+    <div className="bg-primary   ">
     <Container>
-      <div className="px-4 py-0  max-w-7xl h-full sm:px-6 lg:px-8    mx-auto ">
-        <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8"> 
-        <div  className='bg-primary h-full flex items-center justify-center' >
-          <Image  width={350} height={250} alt='product image'  src={product.images?.[0].url} />
+      <div className="px-4 py-0  max-w-7xl h-full   pt-5  mx-auto ">
+     <div   className='flex gap-5 md:flex-row flex-col  h-full' >
+        <div  className='bg-primary w-full  flex items-center justify-center  ' >
+          <Image  width={350} height={250} alt='product image'  src={product.images?.[0].url} className= ' md:w-[350px] w-[200px] md:h-[250px] h-[150px] '/>
         </div>
 
             
       
-          <div className="mt-10  px-4 sm:mt-16 sm:px-0 lg:mt-0 ">
+          <div className="  px-4 h-auto ">
          <Info  data={product} />
-          </div>
+         </div>
         </div>
      
       <FeaturedBanner items={Products}  />

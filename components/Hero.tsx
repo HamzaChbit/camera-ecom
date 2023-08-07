@@ -18,10 +18,10 @@ const Hero=  async () => {
 
 
   return (
-    <div   className='  text-white bg-body h-full  pt-10 mx-auto max-w-7xl ' >
-        <div     className=' justify-between rounded-xl  flex flex-row   w-full   lg:w-full '  >
+    <div   className='  text-white bg-body h-auto  md:mx-auto  pt-10  mx-5   md:max-w-7xl     w-full ' >
+        <div     className='  rounded-xl  flex md:flex-row  flex-col  justify-between h-auto   '  >
             {/* left side */}
-             <div   className=' bg-primary k mx-8    rounded-xl    lg:block  md:hidden sm:hidden ' >
+             <div   className=' bg-primary  md:mx-8 mx-0   hidden rounded-xl  md:block ' >
                 <div  className='bg-yellow-500 flex justify-center items-center  rounded-t-xl py-3 ' >
                     <h2  className='text-black  py-1 font-bold' >BROWE CATEGORIS</h2>
                 </div>
@@ -35,19 +35,21 @@ const Hero=  async () => {
 
             </div>
 {/* lawst */}
-<div className= '  bg-primary text-white   rounded-xl xl:w-auto  md:mx-12    md:w-[300px] '     >
+<div className= '  bg-primary text-white px-5 py-5 rounded-xl  my-5 md:w-full  w-[80%]  '     >
 
-    <div  className='flex flex-row justify-between w-full z-0 ' >
-    <div  className='text-bold mt-10  ml-2 px-10 py-10 ' >
-        <h3  className='text-2xl mb-8 font-medium   md:text-md ' >Special OFFER</h3>
-        <h1  className='text-bold text-5xl   font-black md:text-md' >SAVE 20% <br /> ON YOUR <br />FIRST ORDER</h1>
+    <div  className='flex md:flex-row   flex-col justify-between items-center z-0 ' >
+    <div  className='text-bold w-full ' >
+        <h3  className='text-2xl py-5 font-medium    ' >Special OFFER</h3>
+        <h1  className='text-bold text-5xl   font-black text-md  py-5' >SAVE 20% <br /> ON YOUR <br />FIRST ORDER</h1>
         <Link  href='/product/2b26bc28-140b-4f69-9ad2-5d57bfaa5566' > <button className='bg-yellow-400 rounded-xl mt-10 text-black px-7 py-3 hover:text-white '>SHOP NOW</button></Link>
        
     </div>
-    <div className='px-10 py-10  xl:block md:hidden' >
-           <Image    src={billboard.imageUrl} width={400} height={240 } alt='banner' className='mt-20 mr-4' />
+        <div  className='  md:block hidden    ' >
+                   <Image    src={billboard.imageUrl} width={330} height={240 } alt='banner' />
+        </div>
+    
        
-    </div>
+
 
 
     </div>
@@ -60,8 +62,9 @@ const Hero=  async () => {
           
 
             </div>
-            <div   className='  mx-8 max-w-[450px]  h-[600px]   flex flex-col justify-between   ' >
-                <div  className='bg-primary font-medium px-10 rounded-xl h-full py-10  flex items-center justify-between ' >
+
+            <div   className='    h-[600px]   flex flex-col justify-between  px-5 py-5   my-5 md:max-w-[450px]  w-[80%] ' >
+                <div  className='bg-primary font-medium md:px-10  px-2  rounded-xl h-full py-10 md:2  flex items-center justify-between ' >
                     <div>
                     <h1>SAVE 35% ALL <br /> DSLR CAMERAS  </h1>
                     <Link  href='/product/aecee4e9-f907-450b-84e8-c1a713b239e5' >
@@ -75,7 +78,7 @@ const Hero=  async () => {
           
                 </div>
 
-                <div  className='bg-primary px-10 font-medium py-10 rounded-xl  h-full  mt-10  flex items-center justify-between    ' >
+                <div  className='bg-primary  md:px-10  px-2  font-medium py-10 rounded-xl  h-full  mt-10  flex items-center justify-between    ' >
                 <div  >
                 <h1>SAVE 25% <br /> MIRRORLESS <br /> CAMERAS  </h1>
                 <Link  href='/product/f7c1c754-347d-47ca-a336-1fab1450ab98' >
