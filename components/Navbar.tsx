@@ -8,8 +8,8 @@ import { Search , ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
 
 
-import React, {  useEffect,useRef, useState} from 'react'
-import { MdOutlineClose } from 'react-icons/md'
+import React, {   useState} from 'react'
+import { AiOutlineClose } from 'react-icons/ai'
 import CartModel from './cart/cart-model'
 
 
@@ -53,7 +53,7 @@ const cart = useCart()
                 className='absolute mdl:hidden top-0 left-0 w-[50%] z-10 h-full bg-body bg-opacity-100 flex flex-col items-start'
                  onClick={handlClick}  >
                   <div   className='w-[80%] h-full  bg-body flex flex-col items-center px-4 py-10 relative'>
-                  <MdOutlineClose  className='text-3xl text-yellow-500 cursor-pointer hover:text-white absolute top-4 right-4' onClick={()=>setShowMenu(false)} />
+                  <AiOutlineClose  className='text-3xl text-yellow-500 cursor-pointer hover:text-white absolute top-4 right-4' onClick={()=>setShowMenu(false)} />
                   <div   className=' bg-primary h-[50vh] w-[80%]  rounded-xl    ' >
                 <div  className='bg-yellow-500 flex justify-center items-center  rounded-t-xl py-3 ' >
                     <h2  className='text-white  py-1 font-bold' >BROWE CATEGORIS</h2>
