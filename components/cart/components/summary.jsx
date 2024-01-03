@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useRouter, useSearchParams } from 'next/navigation'
 import React ,{useEffect} from 'react'
 import { toast } from 'react-hot-toast'
+import ReactWhatsapp from 'react-whatsapp'
 export const revalidate=0;
 const  Summary = () => {
   const searchParams = useSearchParams();
@@ -26,18 +27,11 @@ const  Summary = () => {
     return total + item.price * item.quantity;
 }, 0);
 
-  const onCheckout = async () => {
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: items.map((item) => item.id)
-    });
-
-    window.location = response.data.url;
-  }
   
-  // if(cart.items.length === 0) {
-  //   route.push('/')
-            
-  //         }
+  
+  const message = cart.items.map((item) => (
+    `Name: ${item.name} |---| Quantity: ${item.quantity}`
+  )).join('\n');
 
 
 
@@ -51,19 +45,17 @@ const  Summary = () => {
     <div>
 
 {cart.items.length >= 1 && 
- <><div className='flex justify-between flex-row mx-5'>
+ <><div className='flex justify-between flex-row mx-5 '>
           <h2 className="text-base font-medium text-white">Subtotal</h2>
           <h2 className=' font-medium text-md text-white'>${totalPrice}</h2>
         </div><div className='flex justify-between flex-row  mx-5'>
             <h2 className="font-bold  text-2xl text-white">Total</h2>
             <h2 className=' font-bold text-2xl text-white'>$ {totalPrice}</h2>
-          </div><div className='flex flex-row gap-x-10    '>
-            <button onClick={removeAll} className="md:w-full w-[50%] gap-x-5 md:mx-2 mx-10 rounded-xl  bg-yellow-400 border-none  md:px-2 md:py-2  px-0 py-1 mt-3">
+          </div><div className='flex md:flex-row    flex-col   '>
+            <button onClick={removeAll} className="md:w-full  gap-x-5 md:mx-2 mx-3   rounded-xl text-black  bg-yellow-400 border-none  md:px-0 md:py-2  px-0 py-1 mt-3">
               CLEAR CART
             </button>
-            <button onClick={onCheckout} className="md:w-full w-[50%] md:mx-2   mx-10 bg-yellow-400 rounded-xl md:px-2 md:py-2  px-0 py-1 border-none mt-3">
-              Checkout
-            </button>
+            <ReactWhatsapp number="+212 694977110" className="md:w-full  ] md:mx-2   mx-3 bg-yellow-400 rounded-xl md:px-0 md:py-2  px-0 py-1 border-none mt-2" message={message + `  |--------| Total Price :  ${totalPrice}`} >Checkout in Whatsapp    </ReactWhatsapp>
           </div></>
 
 
