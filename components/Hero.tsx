@@ -18,8 +18,8 @@ const Hero=  async () => {
 
 
   return (
-    <div   className='  text-white bg-body h-auto  md:mx-auto  pt-10  mx-5   md:max-w-7xl     w-full ' >
-        <div     className='  rounded-xl  flex md:flex-row  flex-col  justify-between h-auto   '  >
+    <div   className='  text-white bg-body h-full  md:mx-auto  pt-10  mx-5   md:max-w-7xl     w-full ' >
+        <div     className='  rounded-xl  flex md:flex-row  flex-col  justify-between   h-auto   '  >
             {/* left side */}
              <div   className=' bg-primary  md:mx-8 mx-0   hidden rounded-xl  md:block ' >
                 <div  className='bg-yellow-500 flex justify-center items-center  rounded-t-xl py-3 ' >
@@ -35,16 +35,16 @@ const Hero=  async () => {
 
             </div>
 {/* lawst */}
-<div className= '  bg-primary text-white px-5 py-5 rounded-xl  my-5 md:w-full  w-[80%]  '     >
+<div className= '  bg-primary text-white px-5 py-5 rounded-xl   md:w-full  w-[80%]  h-auto'     >
 
-    <div  className='flex md:flex-row   flex-col justify-between items-center z-0 ' >
-    <div  className='text-bold w-full ' >
-        <h3  className='text-2xl py-5 font-medium    ' >Special OFFER</h3>
-        <h1  className='text-bold text-5xl   font-black text-md  py-5' >SAVE 20% <br /> ON YOUR <br />FIRST ORDER</h1>
-        <Link  href='/product/2b26bc28-140b-4f69-9ad2-5d57bfaa5566' > <button className='bg-yellow-400 rounded-xl mt-10 text-black px-7 py-3 hover:text-white '>SHOP NOW</button></Link>
+    <div  className='flex md:flex-row flex-col-reverse justify-center items-center  z-0 ' >
+    <div  className='text-bold w-full  flex flex-col   ' >
+        <h3  className='md:text-2xl text-xl py-5 font-medium  text-yellow-400  ' >Special OFFER</h3>
+        <h1  className='text-bold md:text-5xl   font-black text-2xl  py-5' >SAVE 20% <br /> ON YOUR  FIRST ORDER</h1>
+        <Link  href='/product/2b26bc28-140b-4f69-9ad2-5d57bfaa5566' > <button className='bg-yellow-400 rounded-xl md:mt-10  mt-4 text-black md:px-7  px-4 md:py-3 py-2 hover:text-white '>SHOP NOW</button></Link>
        
     </div>
-        <div  className='  md:block hidden    ' >
+        <div  className=' w-[152px] md:w-[330px]   ' >
                    <Image    src={billboard.imageUrl} width={330} height={240 } alt='banner' />
         </div>
     
@@ -56,19 +56,15 @@ const Hero=  async () => {
 
 
 
-
-
-        
-          
-
             </div>
+<div   className='hidden md:block  md:max-w-[450px]  w-full' >
 
-            <div   className='    h-[600px]   flex flex-col justify-between  px-5 py-5   my-5 md:max-w-[450px]  w-[80%] ' >
-                <div  className='bg-primary font-medium md:px-10  px-2  rounded-xl h-full py-10 md:2  flex items-center justify-between ' >
+   <div   className='    mx-2  flex flex-col justify-center   md:p-5 p-5      ' >
+                <div  className='bg-primary font-medium md:px-10  px-2  rounded-xl h-full  py-10  flex items-center justify-between   ' >
                     <div>
                     <h1>SAVE 35% ALL <br /> DSLR CAMERAS  </h1>
                     <Link  href='/product/aecee4e9-f907-450b-84e8-c1a713b239e5' >
-                    <button className='text-yellow-400 mt-4 border-none hover:text-white  '  >SHOP NOW</button>
+                    <button className='text-yellow-400 mt-4 border-none hover:text-white font-black  '  >SHOP NOW</button>
                     </Link>
                       
                     </div>
@@ -78,11 +74,11 @@ const Hero=  async () => {
           
                 </div>
 
-                <div  className='bg-primary  md:px-10  px-2  font-medium py-10 rounded-xl  h-full  mt-10  flex items-center justify-between    ' >
+                <div  className='bg-primary  md:px-10  px-2  font-medium  rounded-xl  h-full  mt-10  py-10  flex items-center justify-between    ' >
                 <div  >
                 <h1>SAVE 25% <br /> MIRRORLESS <br /> CAMERAS  </h1>
                 <Link  href='/product/f7c1c754-347d-47ca-a336-1fab1450ab98' >
-                    <button className='text-yellow-400 mt-4 border-none hover:text-white  '  >SHOP NOW</button>
+                    <button className='text-yellow-400 font-black mt-4 border-none hover:text-white  '  >SHOP NOW</button>
                     </Link>
 
                 </div>
@@ -94,7 +90,12 @@ const Hero=  async () => {
            
           
 
-            </div>
+            </div> 
+
+
+
+</div>
+          
 
 
 
