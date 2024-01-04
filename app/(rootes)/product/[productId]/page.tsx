@@ -28,7 +28,7 @@ const ProductPage:React.FC<ProductPageProps>  = async ({params}) => {
 
     const Products = await getProducts({ 
       // categoryId: product?.category?.id,
-      categoryId: product?.category?.id,
+      // categoryId: product?.category?.id,
       isFeatured:true
       });
 
@@ -42,18 +42,24 @@ const ProductPage:React.FC<ProductPageProps>  = async ({params}) => {
   
 
   return (
-    <div className="bg-primary   ">
+    <div className=" h-full ">
     <Container>
       <div className="px-4 py-0  max-w-7xl h-full   pt-5  mx-auto ">
-     <div   className='flex gap-5 md:flex-row flex-col  h-full' >
-        <div  className='bg-primary w-full  flex items-center justify-center  ' >
-          <Image  width={350} height={250} alt='product image'  src={product.images?.[0].url} className= ' md:w-[350px] w-[200px] md:h-[250px] h-[150px] '/>
-        </div>
+     <div   className='flex gap-5 md:flex-row flex-col h-full  ' >
+        <div  className='bg-primary  rounded-xl w-full  flex   md:flex-row flex-col items-center justify-center  ' >
+          <div  className=' flex items-center justify-center md:w-[50%] w-full' >
+               <Image  width={250} height={250} alt='product image'  src={product.images?.[0].url} className= 'md:w-[350px] w-[200px] '/>
+          </div>
+          <div  className=' md:w-[50%] w-full ' >
+              <Info  data={product} />
+          </div>
+       
+        {/* </div>
 
             
       
-          <div className="  px-4 h-auto ">
-         <Info  data={product} />
+          <div className="  px-4 h-auto "> */}
+       
          </div>
         </div>
      

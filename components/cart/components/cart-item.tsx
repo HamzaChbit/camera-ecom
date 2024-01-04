@@ -27,7 +27,7 @@ const CartItem:React.FC<CartItemProps> = ({data}) => {
   return (
     <li className='product ' >
   
-            <div  className="relative flex flex-col justify-between sm:ml-6 py-5 px-20  rounded-2xl w-full" >
+            <div  className="relative flex flex-col justify-between sm:ml-6 py-5 px-20  rounded-xl w-full border-2 " >
      
         
 
@@ -36,7 +36,7 @@ const CartItem:React.FC<CartItemProps> = ({data}) => {
                 <p className='flex text-xl font-semibold ml-4 text-white' > {truncateString(data.name,15)}</p>
        </div>
            <div   >
-                    <X  className='absolute  text-white top-0 cursor-pointer right-0  hover:text-yellow-200 '  onClick={onRemove} size={25} />
+                    <X  className='absolute  text-white top-0 mt-1 cursor-pointer right-1  hover:text-yellow-200 '  onClick={onRemove} size={25} />
            </div>
         
 
