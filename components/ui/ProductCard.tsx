@@ -37,7 +37,7 @@ const ProductCard:React.FC<ProductCardProps> = ({data}) => {
     
     
    
-    <div     onClick={handelClick}  className="   px-5 w-[350px] rounded-xl  md:mx-4 mx-2  flex justify-center items-center bg-primary z-0  py-2   cursor-pointer relative " >
+    <div     onClick={handelClick}  className="   px-5 rounded-xl  md:mx-4 mx-2  flex justify-center items-center bg-primary z-0  py-2   cursor-pointer relative " >
         <div   className='bg-yellow-500 w-10 absolute right-1 top-0   box-border h-6 rounded-2xl text-black flex  '>
             <div className='flex  absolute right-1 top-0 justify-end items-end' >
             NEW

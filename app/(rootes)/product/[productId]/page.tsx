@@ -42,11 +42,11 @@ const ProductPage:React.FC<ProductPageProps>  = async ({params}) => {
   
 
   return (
-    <div className=" h-full ">
+    // <div className=" h-full ">
     <Container>
       <div className="px-4 py-0  max-w-7xl h-full   pt-5  mx-auto ">
      <div   className='flex gap-5 md:flex-row flex-col h-full  ' >
-        <div  className='bg-primary  rounded-xl w-full  flex   md:flex-row flex-col items-center justify-center  ' >
+        <div  className='bg-primary rounded-xl w-full  flex   md:flex-row flex-col items-center justify-center  ' >
           <div  className=' flex items-center justify-center md:w-[50%] w-full' >
                <Image  width={250} height={250} alt='product image'  src={product.images?.[0].url} className= 'md:w-[350px] w-[200px] '/>
           </div>
@@ -68,7 +68,7 @@ const ProductPage:React.FC<ProductPageProps>  = async ({params}) => {
   
       </div>
     </Container>
-  </div>  
+  // </div>  
   )
 }
 

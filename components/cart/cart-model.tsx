@@ -33,7 +33,7 @@ const CartModel = () => {
             <X size={40}  className='border-none hover:text-yellow-400' />
      
           </button>
-          <div className='product-container h-[70vh] '>
+          <div className='product-container h-[65vh] '>
           {cart.items.length === 0 &&  <p  className='text-white font-bold flex justify-center text-2xl' >No  items added to cart</p>}
           <ul  >{cart.items.map((item)=> (
                     <CartItem  key={item.id}  data={item}  />

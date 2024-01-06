@@ -42,20 +42,20 @@ const  Summary = () => {
   return (
     
   
-    <div>
+    <div  >
 
 {cart.items.length >= 1 && 
- <><div className='flex justify-between flex-row mx-5 '>
+ <><div className='flex justify-between flex-row mx-5   '>
           <h2 className="text-base font-medium text-white">Subtotal</h2>
           <h2 className=' font-medium text-md text-white'>${totalPrice}</h2>
         </div><div className='flex justify-between flex-row  mx-5'>
             <h2 className="font-bold  text-2xl text-white">Total</h2>
             <h2 className=' font-bold text-2xl text-white'>$ {totalPrice}</h2>
           </div><div className='flex md:flex-row    flex-col   '>
-            <button onClick={removeAll} className="md:w-full  gap-x-5 md:mx-2 mx-3   rounded-xl text-black  bg-yellow-400 border-none  md:px-0 md:py-2  px-0 py-1 mt-3">
+            <button onClick={removeAll} className="md:w-full   md:mx-2 mx-3   rounded-xl text-black  bg-yellow-400 border-none  md:px-0 md:py-0  px-0 py-1 mt-2">
               CLEAR CART
             </button>
-            <ReactWhatsapp number="+212 694977110" className="md:w-full  ] md:mx-2   mx-3 bg-yellow-400 rounded-xl md:px-0 md:py-2  px-0 py-1 border-none mt-2" message={message + `  |--------| Total Price :  ${totalPrice}`} >Checkout in Whatsapp    </ReactWhatsapp>
+            <ReactWhatsapp number="+212 694977110" className="md:w-full  ] md:mx-2   mx-3 bg-yellow-400 rounded-xl md:px-0 md:py-2  px-0 py-1 border-none mt-2" message={message + `  |--------| Total Price : $ ${totalPrice}`} >Checkout in Whatsapp    </ReactWhatsapp>
           </div></>
 
 
