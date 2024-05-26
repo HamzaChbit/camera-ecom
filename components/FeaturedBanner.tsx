@@ -20,7 +20,7 @@ const sliderRight = ( ) =>{
 }
 
   return (
-<div  className='max-w-7xl h-auto  z-0 mt-3 mx-auto py-5 ' >
+<div  className='max-w-7xl h-auto  z-0 mt-3 mx-auto py-5 ' data-aos="fade-up-right">
 
 
     <h1  className='text-white py-10  px-20 font-bold text-2xl' >Related Product</h1>

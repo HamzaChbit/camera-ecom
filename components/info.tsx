@@ -29,7 +29,7 @@ const handleAddToCart = () => {
     <div  className="bg-primary px-10  py-20 rounded-xl" >
         <h3  className="text-lg pb-4 font-medium text-yellow-500" >{data.category.name}</h3>
       <h1 className="md:text-3xl text-xl  font-bold text-white pb-4 ">{data.name}</h1>
-      <p  className="text-md  text-white    hidden  md:block  " >Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eaque quam sequi labore atque porro, quos assumenda nesciunt rerum tempora a molestiae numquam harum aperiam explicabo repudiandae nobis, et ex?</p> 
+      <p  className="text-md  text-white    hidden  md:block  " >{data.description}</p> 
         
       <div className="mt-3 flex  w-auto  ">
      <p className="md:text-3xl text-2xl  font-bold mt-2  text-yellow-500 ">

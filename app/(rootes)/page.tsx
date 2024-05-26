@@ -7,6 +7,7 @@ export const revalidate=0;
  const    Home =  async () => {
 
   const products = await getProducts({isFeatured:true})
+  
   return (
 
     <Container>

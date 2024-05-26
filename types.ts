@@ -7,6 +7,7 @@ export interface Product {
     size: Size;
     quantity: number; // Add this property
     color: Color;
+    description:string;
     images: Image[]
   };
   
@@ -19,6 +20,12 @@ export interface Product {
     id: string;
     label: string;
     imageUrl: string;
+  };
+
+  export interface Color {
+    id: string;
+    name: string;
+    value:string
   };
   
   export interface Category {
@@ -33,8 +40,4 @@ export interface Product {
     value: string;
   };
   
-  export interface Color {
-    id: string;
-    name: string;
-    value: string;
-  }
+  

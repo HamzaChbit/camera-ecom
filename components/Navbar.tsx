@@ -8,10 +8,12 @@ import { Search , ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
 
 
-import React, {   useState} from 'react'
+import React, {   useEffect, useState} from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import CartModel from './cart/cart-model'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ScrollToTop from "react-scroll-to-top";
 
 
 
@@ -37,7 +39,9 @@ const cart = useCart()
 }
 
 
-  
+useEffect(() => {
+  AOS.init();
+}, []);
 
   return (
 <header className="text-white-600  bg-black body-font w-full   ">
@@ -65,11 +69,11 @@ const cart = useCart()
 
  
                   <ul  className='flex flex-col gap-y-8  ' >
-                    <Link className='hover:text-yellow-500'  href='/category/4ee00058-4e5f-4fcf-a9c8-69c42fcc7622'>COMPCT</Link>
-                    <Link className='hover:text-yellow-500' href='/category/6fff530f-b4cc-477d-9e67-db5e58d1aa6c'>MIRRORLESS</Link>
-                    <Link className='hover:text-yellow-500' href='/category/90088ac0-b56f-4b04-bb9b-c90fb534efb0'>DSLR</Link>
+                    <Link className='hover:text-yellow-500'  href='/category/b3372a42-487b-408b-b610-f861769c1c9f'>COMPCT</Link>
+                    <Link className='hover:text-yellow-500' href='/category/8e8fc352-6d73-41b0-b5d8-5561231bff74'>MIRRORLESS</Link>
+                    <Link className='hover:text-yellow-500' href='/category/c760adbc-951e-4707-bc31-95f6cbf43459'>DSLR</Link>
                     
-                    <Link className='hover:text-yellow-500'  href='/category/dfc412af-ab4f-4b84-b59e-336b49cd0a66'>FILM</Link>
+                    <Link className='hover:text-yellow-500'  href='/category/2e58306e-3c96-43c3-810e-0b9e363e3cd7'>FILM</Link>
                   </ul>
                   </nav>
                 </div>
@@ -140,6 +144,7 @@ const cart = useCart()
      
     </div>
   </div>
+  <ScrollToTop smooth className='flex justify-center items-center 'color='black'/>
 </header>
   )
 }
